@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "digital";
+    src: url("../digital-7.ttf");
+}
+
+body {
+    background-color: rgb(121, 216, 184);
+    color: whitesmoke;
+    font-family: 'Lobster', cursive;;
+    margin-top: 20px;
+}
+
+i {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+#clock {
+    width: 300px;
+    border: 10px solid rgba(119, 55, 2, 0.712);
+    border-radius: 40px;
+    font-family: digital;
+}x  
+
+#timer-label{
+    color: blue;
+    font-size: 2rem;
+}
+
+#time-left {
+    color: blue;    
+    font-size: 5rem;
+    line-height: 4rem;
+}
+
+.clock-control {
+    font-size: 1.5rem;
+    margin: 10px 20px 10px;
+}
+
+button {
+    color: white;
+    margin: 10px;
+    background: none;
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}
