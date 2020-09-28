@@ -14,7 +14,7 @@ class App extends React.Component {
 
         return (
             <div id='app'>
-               
+               <h1>25 + 5 Clock</h1>
             </div>
         )
     }
