@@ -1,22 +1,10 @@
-import React from 'react'
-import ReactDom from 'react-dom'
+import React from 'react';
+import ReactDom from 'react-dom';
+import ClockButtons from './components/ClockButtons.jsx'
+import FooterAndAudio from './components/FooterAndAudio.jsx'
+import Length from './components/Length.jsx'
+import Title from './components/Title.jsx'
 
-class Length extends React.PureComponent  {
-    render() {
-        const type = this.props.type
-
-        return (
-            <div id={`${type}-length-control`} className='m-4 d-inline-block'>
-                <h2 id={`${type}-label`}>{type} Length</h2>
-                <h3 className='text-center'>
-                    <button id={`${type}-increment`} onClick={this.props.onLengthChange}><i className="fa fa-arrow-up" /></button>
-                    <span id={`${type}-length`}>{this.props.length}</span>
-                    <button id={`${type}-decrement`} onClick={this.props.onLengthChange}><i className="fa fa-arrow-down" /></button>
-                </h3>
-            </div>
-        )
-    }
-}
 
 class App extends React.Component {
     constructor(props) {
@@ -147,8 +135,6 @@ class App extends React.Component {
             intervalID: '',
         })
     }
-
-
     render() {
         let timeStyle
         if (this.state.timer <= 60) {
@@ -156,30 +142,17 @@ class App extends React.Component {
         } else {
             timeStyle = { color: 'white' }
         }
-
         return (
             <div id='app'>
-                <h1 className='text-center' >25 + 5 Clock</h1>
+                <Title />
                 <Length type={'break'} length={this.state.breakLength} onLengthChange={this.onLengthChange} />
                 <Length type={'session'} length={this.state.sessionLength} onLengthChange={this.onLengthChange} />
-
                 <div id="clock" className='col mx-auto'>
                     <h2 id='timer-label' className='text-center my-1'>{this.state.clockType}</h2>
                     <h2 id='time-left' className='text-center' style={timeStyle}>{this.clockify()}</h2>
                 </div>
-                <div className='d-flex justify-content-center'>
-                    <button onClick={this.onTimerControl}>
-                        <i id='start' className="fas fa-play clock-control pr-0 mr-0" />
-                        <i id='stop' className="fas fa-stop clock-control pl-0 ml-0" />
-                    </button>
-                    <button onClick={this.onReset}><i id='reset' className="fas fa-redo clock-control" /></button>
-                </div>
-                <hr />
-                <footer>
-                    <p className='text-center m-0' style={{ color: 'red' }}>Designed and Coded by</p>
-                    <p className='text-center m-0' style={{ color: 'blue' }}>Shao Wei</p>
-                </footer>
-                <audio id="beep" preload="auto" src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"></audio>
+                <ClockButtons onTimerControl={this.onTimerControl} onReset={this.onReset} />
+                <FooterAndAudio />
             </div>
         )
     }
