@@ -1,13 +1,14 @@
 @font-face {
     font-family: "digital";
-    src: url("../digital-7.ttf");
+    src: url("../digital-7.mono.ttf");
 }
 
 body {
     background-color: rgb(121, 216, 184);
     color: whitesmoke;
-    font-family: 'Lobster', cursive;;
+    font-family: "Lobster", cursive;
     margin-top: 20px;
+    text-align: center;
 }
 
 i {
@@ -18,20 +19,20 @@ i {
 
 #clock {
     width: 300px;
-    border: 10px solid rgba(119, 55, 2, 0.712);
+    border: 10px solid rgba(4, 192, 183, 0.712);
     border-radius: 40px;
     font-family: digital;
-}x  
+}
 
-#timer-label{
+#timer-label {
     color: blue;
     font-size: 2rem;
 }
 
 #time-left {
-    color: blue;    
     font-size: 5rem;
     line-height: 4rem;
+    letter-spacing: 3px;
 }
 
 .clock-control {
@@ -42,9 +43,20 @@ i {
 button {
     color: white;
     margin: 10px;
+    padding: 0;
     background: none;
     border: none;
-    &:focus{
+    &:focus {
         outline: none;
     }
 }
+
+span {
+    display: inline-block;
+    min-width: 3rem;
+}
+
+div[id$='length-control' ] {
+    min-width: 180px;
+}
+
