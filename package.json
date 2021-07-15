@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -19,8 +20,8 @@
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
     "mini-css-extract-plugin": "^0.11.2",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.2",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.2.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
@@ -29,7 +30,8 @@
     "watch": "webpack --mode development --watch",
     "start": "webpack --mode development",
     "deploy": "webpack --mode production",
-    "open": "webpack-dev-server --config webpack.config.js"
+    "open": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack --mode development  --progress"
   },
   "keywords": [],
   "author": "",
