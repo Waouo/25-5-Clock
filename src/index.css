@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "digital";
+  src: url(../fonts/digital-7.mono.ttf); }
+
+body {
+  background-color: #79d8b8;
+  color: whitesmoke;
+  font-family: "Lobster", cursive;
+  margin-top: 20px;
+  text-align: center; }
+
+i {
+  cursor: pointer;
+  padding: 0;
+  margin: 0; }
+
+#clock {
+  width: 300px;
+  border: 10px solid rgba(4, 192, 183, 0.712);
+  border-radius: 40px;
+  font-family: digital; }
+
+#timer-label {
+  color: blue;
+  font-size: 2rem; }
+
+#time-left {
+  font-size: 5rem;
+  line-height: 4rem;
+  letter-spacing: 3px; }
+
+.clock-control {
+  font-size: 1.5rem;
+  margin: 10px 20px 10px; }
+
+button {
+  color: white;
+  margin: 10px;
+  padding: 0;
+  background: none;
+  border: none; }
+  button:focus {
+    outline: none; }
+
+span {
+  display: inline-block;
+  min-width: 3rem; }
+
+div[id$='length-control'] {
+  min-width: 180px; }
+
